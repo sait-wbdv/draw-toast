@@ -1,21 +1,46 @@
-// bread variable
+let isTimerDone = false;
 
-// isTimerDone
+let isBreadInToaster = false;
 
-// isBreadInToaster
+let isToast = false;
 
-// isToast
+const bread = {
+  size: [60, 40, 5],
+  burnPoint: 600,
+  toastPoint: 300,
+  currentTemp: 20,
+};
 
-// toaster variable
+const toaster = {
+  slots: 4,
+  button: (e) => {
+    if (e) {
+      return true;
+    }
+    return false;
+  },
+};
 
-/*  FUNCTIONS  */
+function cageDown(e) {
+  if (e) {
+    setTimer();
+  }
+}
 
-// cageDown
+// cageUp TODO: merge with cageDown function
 
-// cageUp
+function cageUp(e) {}
 
-// timer
+function setTimer(e, time = 120) {
+  if (e) {
+    // run activate heat
+    activateHeat();
+    // start timer at length of time argument
+  }
+  // TODO: this doesn't feel right: toggle cage && disable heat element
+}
 
-// activateHeat
-
-// removeToastFromToaster
+function activateHeat() {
+  // increase bread temp
+  // TODO: as loop increases, apply value to bread current temp consistenly
+}
